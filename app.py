@@ -16,7 +16,7 @@ from utils import load_clip_model, load_text_embedding_model, load_whisper_model
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-st.set_page_config(layout="wide", page_title="LoomRAG", page_icon="🔍")
+st.set_page_config(layout="wide", page_title="AegisVault", page_icon="🔍")
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 clip_model, preprocess = load_clip_model()
@@ -26,7 +26,7 @@ os.makedirs("annotations/", exist_ok=True)
 os.makedirs("images/", exist_ok=True)
 
 with st.sidebar:
-    st.title("LoomRAG")
+    st.title("AegisVault")
     page = option_menu(
         menu_title=None,
         options=["Data Upload", 'Data Search', "Data Annotation", "Model Fine-Tuning"], 
